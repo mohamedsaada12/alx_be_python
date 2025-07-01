@@ -1,8 +1,5 @@
 # Define global conversion factors
-global FAHRENHEIT_TO_CELSIUS_FACTOR
 FAHRENHEIT_TO_CELSIUS_FACTOR = 5 / 9
-
-global CELSIUS_TO_FAHRENHEIT_FACTOR
 CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5
 
 # Implement conversion functions
@@ -20,13 +17,12 @@ try:
     unit = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").strip().upper()
 
     if unit == "F":
-        converted = convert_to_celsius(temperature)
-        print(f"{temperature}°F is {converted}°C")
+        result = convert_to_celsius(temperature)
+        print(f"{temperature}°F is {result}°C")
     elif unit == "C":
-        converted = convert_to_fahrenheit(temperature)
-        print(f"{temperature}°C is {converted}°F")
+        result = convert_to_fahrenheit(temperature)
+        print(f"{temperature}°C is {result}°F")
     else:
-        raise ValueError("Invalid temperature unit. Please enter C or F.")
-
+        print("Invalid unit. Please enter C or F.")
 except ValueError:
     print("Invalid temperature. Please enter a numeric value.")
