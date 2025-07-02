@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 
-# Global conversion factors
+# Define global conversion factors
 FAHRENHEIT_TO_CELSIUS_FACTOR = 5 / 9
 CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5
 
 def convert_to_celsius(fahrenheit):
-    """Converts Fahrenheit to Celsius using the global conversion factor."""
+    """Convert Fahrenheit to Celsius using the global factor."""
     global FAHRENHEIT_TO_CELSIUS_FACTOR
     return (fahrenheit - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR
 
 def convert_to_fahrenheit(celsius):
-    """Converts Celsius to Fahrenheit using the global conversion factor."""
+    """Convert Celsius to Fahrenheit using the global factor."""
     global CELSIUS_TO_FAHRENHEIT_FACTOR
     return (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
 
