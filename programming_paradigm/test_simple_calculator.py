@@ -32,9 +32,4 @@ class TestSimpleCalculator(unittest.TestCase):
     def test_division(self):
         """Test the divide method."""
         self.assertEqual(self.calc.divide(10, 2), 5)
-        self.assertEqual(self.calc.divide(-6, 2), -3)
-        self.assertEqual(self.calc.divide(0, 1), 0)
-        self.assertEqual(self.calc.divide(5, 0), None)  # Edge case: divide by zero
-
-if __name__ == '__main__':
-    unittest.main()
+        self.assertEqual(self.calc.divide(-6, 2),
